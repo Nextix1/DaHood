@@ -8,7 +8,6 @@ vim:SendKeyEvent(true, keytoclick, false, game)
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 
-
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Scrvpter/Pluto/Lua/Loader.Lua', true))()
 
 
