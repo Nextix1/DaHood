@@ -8,26 +8,6 @@ vim:SendKeyEvent(true, keytoclick, false, game)
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 
-local ToolName = {"Q"}  
-local Storage = game.ServerStorage 
-
-
-local Part = script.Parent.Parent
-local ProximityPrompt = script.Parent
-
-ProximityPrompt.Triggered:connect(function(Player)
-	if Player and Player.Character then
-		local Backpack = Player:WaitForChild("Backpack")
-		local StarterGear= Player:WaitForChild("StarterGear")
-		for i = 1, #ToolName do
-			local Tool = Storage:FindFirstChild(ToolName[i])
-			if Tool and backpack:FindFirstChild(Tool.Name) == nil and Backpack:FindFirstChild(Tool.Name) == nil then
-				Tool:clone().Parent = Backpack
-				Tool:clone().Parent = StarterGear
-			end
-		end
-	end
-end)
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Scrvpter/Pluto/Lua/Loader.Lua', true))()
 
